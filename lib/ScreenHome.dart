@@ -15,26 +15,18 @@ class ScreenHome extends StatelessWidget {
           padding: const EdgeInsets.all(20.0),
           child: GridView.count(
             crossAxisCount: 2,
-            mainAxisSpacing: 20,
+            mainAxisSpacing: 10,
             crossAxisSpacing: 10,
             padding: const EdgeInsets.all(18),
-            children: [
-              GridView.count(
-                crossAxisCount: 2,
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-                padding: const EdgeInsets.all(18),
-                children: List.generate(
-                  10,
-                  (index) => NoteItem(
-                    id: index.toString(),
-                    title: 'Loren Ipsum Title $index',
-                    content:
-                        '"Loren Ipsum" is a placeholder text commonly used in the design and typesetting industry. Its used to demonstrate the visual form of a document or a font without focusing on meaningful content. The text is typically nonsensical Latin-like words, allowing the viewer to focus on the layout and design rather than the actual meaning of the text.',
-                  ),
-                ),
+            children: List.generate(
+              10,
+              (index) => NoteItem(
+                id: index.toString(),
+                title: 'Loren Ipsum Title $index',
+                content:
+                    '"Loren Ipsum" is a placeholder text commonly used in the design and typesetting industry. Its used to demonstrate the visual form of a document or a font without focusing on meaningful content. The text is typically nonsensical Latin-like words, allowing the viewer to focus on the layout and design rather than the actual meaning of the text.',
               ),
-            ],
+            ),
           ),
         ),
       ),
